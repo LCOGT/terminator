@@ -1,0 +1,38 @@
+<html>
+<head>
+	<!--[if lt IE 10]><script src="http://lcogt.net/virtualsky/embed/excanvas.js" type="text/javascript"></script><![endif]-->
+	<script src="http://lcogt.net/virtualsky/embed/jquery-1.4.2.js" type="text/javascript"></script>
+	<script src="terminator2.js" type="text/javascript"></script>
+	<script>
+	var map;
+	window.onload = function() {
+		// Add location placemarks
+		var placemarks = new Array();
+		placemarks.push({lon:-156.26,lat:20.71,label:'Haleakala',link:'http://lcogt.net/site/haleakala'});
+		placemarks.push({lon:149.06,lat:-31.27,label:'Siding\nSpring',link:'http://lcogt.net/site/siding-spring'})
+		placemarks.push({lon:-70.81,lat:-30.17,label:"Cerro Tololo",link:'http://lcogt.net/site/cerro-tololo'})
+		placemarks.push({lon:20.81,lat:-32.38,label:"Sutherland",link:'http://lcogt.net/site/sutherland'})
+		placemarks.push({lon:-104.01,lat:30.68,label:"McDonald",link:'http://lcogt.net/site/fort-davis'})
+
+		map = new WorldMap({placemarks:placemarks});
+		setInterval("map.update()",60000);	// Update every minute
+	}
+	</script>
+	<style>
+	body {
+		padding: 0px;
+		margin: 0px;
+		font-family:Helvetica,"Bitstream Vera Sans",Arial,sans-serif;
+	}
+	#map { height: 100%; width:100%; }
+	</style>
+</head>
+<body>
+
+<div id="map">
+	<img id="night" src="earth_night.jpg" style="display:none;" />
+	<img id="day" src="earth_day3.jpg" style="display:none;" />
+</div>
+
+</body>
+</html>
