@@ -1,7 +1,9 @@
 /*
 	Earth Terminator Display
 	Created by Stuart Lowe (LCOGT)
-	(C) LCOGT 2011
+	Maintainer Edward Gomez (LCOGT)
+	(C) LCOGT 2015
+
 	
 */
 function WorldMap(conf) {
