@@ -1,0 +1,6 @@
+web:
+  image: docker.lcogt.net/terminator:latest
+  ports:
+    - "9500:80"
+  restart: "always"
+  mem_limit: 32m
